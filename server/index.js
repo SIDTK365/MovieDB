@@ -31,15 +31,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/trending', async (req, res) => {
-    const query = req.query.query;
     try {
         // Make a request to the TMDb API to search for movies
         const trendingResponse = await axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`);
-
-
         const genresResponse = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`);
-
-
 
         const searchResults = trendingResponse.data.results.map(result => ({
             id: result.id,
@@ -69,7 +64,6 @@ app.get('/api/search', async (req, res) => {
     try {
         // Make a request to the TMDb API to search for movies
         const searchResponse = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`);
-        
         const genresResponse = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`);
         
         const searchResults = searchResponse.data.results.map(result => ({

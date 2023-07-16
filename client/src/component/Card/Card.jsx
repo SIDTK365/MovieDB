@@ -29,7 +29,7 @@ const Card = ({ searchResults }) => {
 
                             <h3
                                 class="mt-6 leading-normal text-gray-800 group-hover:text-purple-400 font-semibold text-xl lg:text-4xl line-clamp-3 transition translation-all duration-200 ease-in-out"
-                                title="Lorem Ipsum is simply dummy text of the printing"
+                                title="Movie Title"
                             >
                                 {item.title}
                             </h3>
