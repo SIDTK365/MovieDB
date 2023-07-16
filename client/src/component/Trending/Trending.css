@@ -1,0 +1,11 @@
+/* demo shizzle only */
+body {
+  background: #eee;
+  /* max-width: 900px; */
+  /*   outline: 1px solid #ccc; */
+}
+
+/* Still use global css (not utility css) for base typography etc? */
+p {
+  margin-bottom: 0.8em;
+}
